@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Из картинки в схему</title>
+</head>
+<body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+    <h1>Загрузка в схему</h1>
+          <hr>
+
+    <form action="/" method="POST" enctype="multipart/form-data">
+
+    <div class="form-group">
+              <label>Выберите файл</label>
+              <div class="custom-file">
+                <input type="file" class="custom-file-input" name="image" id="image">
+                <label class="custom-file-label" for="image">Выберите изображение...</label>
+              </div>
+              <div class="color_num">
+                  <input type="text" name="colors" id="colors">
+                  <label class="color_num_label" for="colors">Введите количество цветов</label>
+              </div>
+              <div class="width_img">
+                <input type="text" name="width_img" id="width_img">
+                <label class="width_img_label" for="width_img">Введите ширину</label>
+            </div>
+            <div class="height_img">
+                <input type="text" name="height_img" id="height_img">
+                <label class="height_img_label" for="height_img">Введите высоту</label>
+            </div>
+            </div>
+    <button type="submit" class="btn btn-primary">Поехали</button>
+    </form>
+
+        </div>
+      </div>
+    </div>
+
+    <img src="data:image/png;base64, {{ uploaded_image1 }}" />
+    <img src="data:image/png;base64, {{ uploaded_image2 }}" />
+    <img src="data:image/png;base64, {{ uploaded_pal }}" />
+</body>
+</html>
